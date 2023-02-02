@@ -1,0 +1,51 @@
+//$max-row-grid-height:;
+$main-max-width:1000px;
+$img-height:70%;
+$img-width: 100%;
+
+@mixin general-card-style{
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    h2{
+        font-family:monospace;
+        font-weight: 100;
+    } 
+}
+
+@mixin general-card-grid-style($row-direction){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: $row-direction;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    max-width: $main-max-width;
+}
+
+img {height: $img-height; width: $img-width;}
+
+.row-grid{
+margin-bottom: 300px;
+@include general-card-grid-style(row);
+
+.card{
+    flex-grow: 3;
+    @include general-card-style() 
+    }
+}
+
+.col-grid{
+    height: 1500px;
+    @include general-card-grid-style(column);
+
+    .card{
+        @include general-card-style()
+    }
+}

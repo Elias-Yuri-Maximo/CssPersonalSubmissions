@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1000px;
+}
+
+img {
+  height: 70%;
+  width: 100%;
+}
+
+.row-grid {
+  margin-bottom: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: row;
+}
+.row-grid .card {
+  flex-grow: 3;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+}
+.row-grid .card h2 {
+  font-family: monospace;
+  font-weight: 100;
+}
+
+.col-grid {
+  height: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+}
+.col-grid .card {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+}
+.col-grid .card h2 {
+  font-family: monospace;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=styles.css.map */
